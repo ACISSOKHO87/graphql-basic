@@ -1,0 +1,20 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon src/index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "@apollo/server": "^4.11.3",
+        "@graphql-tools/mock": "^9.0.20",
+        "@graphql-tools/schema": "^10.0.21",
+        "graphql": "^16.10.0",
+        "graphql-tag": "^2.12.6",
+        "nodemon": "^3.1.9"
+    }
+}
