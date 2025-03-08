@@ -39,7 +39,7 @@ create au folder server for the Backend
 -   Populate the queried schema fields with mocked data
 -   Return the populated fields as a response
 
-### DEPENDENCIES
+#### DEPENDENCIES
 
 Install the packages we need: @apollo/server, graphql and graphql-tag.
 
@@ -51,7 +51,7 @@ Install the packages we need: @apollo/server, graphql and graphql-tag.
 npm install @apollo/server graphql graphql-tag
 ```
 
-## APOLLO SERVER
+### APOLLO SERVER
 
 To create our server, we'll use the @apollo/server package that we installed previously.
 We'll only need the named export ApolloServer
@@ -80,3 +80,25 @@ const server = new ApolloServer({
   }),
 });
 ```
+
+## FRONTEND (CLIENT)
+
+we need to install two packages : graphql and @apollo/client.
+
+```
+npm install graphql @apollo/client
+```
+
+-   graphql provides the core logic for parsing GraphQL queries.
+-   @apollo/client contains pretty much everything we need to build our client, including an in-memory cache, local state management, and error handling.
+
+to make Apoolo Client available to our app's React components, we have to wrap our React componant tree in the ApolloProvider component
+
+```
+const client = new ApolloClient({
+  uri: "http://localhost:4000",
+  cache: new InMemoryCache(),
+});
+```
+
+The useQuery hook executes the query we pass it and returns loading, error and data properties.
