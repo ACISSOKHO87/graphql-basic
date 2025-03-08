@@ -9,11 +9,11 @@ const typeDefs = gql`
         "the tack's main author"
         author: Author!
         "the track's main illustration to display in track car or track page detail"
-        thumbail: String
+        thumbnail: String
         "the track's approximate length to complete, in minutes"
         length: Int
         "the number of modules this track contains"
-        moduleCount: Int
+        modulesCount: Int
     }
 
     "Author of a complete Track"
